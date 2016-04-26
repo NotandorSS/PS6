@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 13, 2014 2:49:57 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+ <class name="domain.PersonDomainModel" table="per">
+  <id name="PersonID" type="uuid-char">
+   <column length="40" name="PersonID"/>
+  </id>
+  <property name="firstName" type="string">
+   <column length="20" name="firstName" not-null="true"/>
+  </property>
+  <property name="lastName" type="string">
+   <column length="20" name="lastName" not-null="true"/>
+  </property>
+  <property generated="never" lazy="false" name="street" type="string">
+   <column length="20" name="street" not-null="true"/>
+  </property>
+  <property generated="never" lazy="false" name="city" type="string">
+   <column length="20" name="city" not-null="true"/>
+  </property>
+  <property generated="never" lazy="false" name="birthday" type="date">
+   <column length="7" name="birthday" not-null="true"/>
+  </property>
+  <property generated="never" lazy="false" name="postalCode" type="integer">
+   <column length="20" name="postalCode" not-null="true"/>
+  </property>
+ </class>
+</hibernate-mapping>
